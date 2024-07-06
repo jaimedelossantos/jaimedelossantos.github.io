@@ -1,115 +1,76 @@
-<!--<!DOCTYPE html>
- <html lang="EN"/>
-   <title></title>
-   <head></head>
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-   <body>
-   <div class="container">
-    <div class="row">
-     <div class="col-4">
-      <h3> Rene serantes </h3>
-      <img src="IMG20240114164016.jpg" class="img-thumbnail" sytle="width:400px;height:500px;"/>
-      <button class="btn btn-primary" type="button" id="btnLike1"> Like </button>
-      <output id="count1">0</output>
-      <button class="btn btn-primary" type="button" id="btnDislike1"> Dislike </button>
-      <output id="count3">0</output>
-     </div>
-     <div class="col-4">
-      <h3> With geng geng </h3>
-      <img src="IMG20240225175549.jpg" class="img-thumbnail" sytle="width:400px;height:500px;"/>
-      <button class="btn btn-primary" type="button" id="btnLike2"> Like </button>
-      <output id="count2">0</output>
-      <button class="btn btn-primary" type="button" id="btnDislike2"> Dislike </button>
-      <output id="count4">0</output>
-     </div>
-       <div class="col-4">
-          comment <br/>
-          <input type="text" class="form-control" id="comment"/>
-        <button clss="btn btn-primary" id="submit">Submit</button>
-          <textarea class="form-control" id="commentbox" row=12></textarea>
-        </div>
-    </div>
-   </div>
-    <script src="index.js"></script>
-   </body>
-
- </html>
--->
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <style>
-        body {
-            background-image: url('click.jpg);
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-        }
-    </style>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My happniness</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JAIME</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-12 text-center">
-               <h2>indo concept</h2>
-                <hr class="hr" />
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-4 text-center">
-                <label id="product1">indo 1</label>
-                <img src="click.jpg" style="width:400px;height:500px;" class="img-thumbnail"/><br>
-                <label for="product1" id="price1">900,000</label>
-                <input type="number" class="form-control" id="qty1" placeholder="Enter quantity"/><br>
-            </div>
-            <div class="col-4 text-center">
-                <label id="product2">indo 2</label>
-                <img src="ADV.jpg" style="width:400px;height:500px;" class="img-thumbnail"/><br>
-                <label for="product2" id="price2">600,000</label>
-                <input type="number" class="form-control" id="qty2" placeholder="Enter quantity"/><br>
-            </div>
-            <div class="col-4 text-center">
-                <label id="product3">indo 3</label>
-                <img src="nmax.jpg" style="width:400px;height:500px;" class="img-thumbnail"/><br>
-                <label for="product3" id="price3">100000</label>
-                <input type="number" class="form-control" id="qty3" placeholder="Enter quantity"/><br>
-            </div>
-            <div class="col-4 text-center">
-                <label id="product4">indo 4</label>
-                <img src="raider.jpg" style="width:400px;height:500px;" class="img-thumbnail"/><br>
-                <label for="product4" id="price4">200000</label>
-                <input type="number" class="form-control" id="qty4" placeholder="Enter quantity"/><br>
-            </div>
-            <div class="col-4 text-center">
-                <label id="product5">indo 5</label>
-                <img src="sniper.jpg" style="width:400px;height:500px;" class="img-thumbnail"/><br>
-                <label for="product5" id="price5">600,000</label>
-                <input type="number" class="form-control" id="qty5" placeholder="Enter quantity"/><br>
-            </div>
-            <div class="col-4 text-center">
-                <label id="product6">indo 6</label>
-                <img src="2nmaxx.jpg" style="width:400px;height:500px;" class="img-thumbnail"/><br>
-                <label for="product6" id="price6">800,000</label>
-                <input type="number" class="form-control" id="qty6" placeholder="Enter quantity"/><br>
-            </div>
-            <div class="col-4">
-                <label for="carts">Orders</label><br>
-                <textarea class="form-control" rows="29" id="carts" cols="200" readonly style="width:350px;height:400px;font-size:12px;"></textarea>
-                <input type="text" class="form-control border-0" id="total" readonly placeholder="Total"/>
-                <input type="number" class="form-control" id="cash" placeholder="Cash Tendered"/>
-                <input type="text" class="form-control border-0" id="change" readonly placeholder="Change"/>
-                <button class="btn btn-success" id="purchaseButton">Purchase</button>
-            </div>
-        </div>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-12 text-center">
+      <h2>INDO CONCEPT</h2>
+      <hr class="hr" />
     </div>
-    <script src="index.js"></script>
+  </div>
+  
+  <div class="row justify-content-center">
+    <div class="col-md-4 text-center mb-4">
+      <label id="product1">NO1</label>
+      <img src="click.jpg" style="width:400px; height:500px;" class="img-thumbnail"/>
+      <label for="product1" id="price1">10000.00</label>
+      <input type="number" class="form-control" id="qty1" placeholder="Enter quantity"/>
+    </div>
+  
+    <div class="col-md-4 text-center mb-4">
+      <label id="product2">NO2</label>
+      <img src="ADV.jpg" style="width:400px; height:500px;" class="img-thumbnail"/>
+      <label for="product2" id="price2">20000.00</label>
+      <input type="number" class="form-control" id="qty2" placeholder="Enter quantity"/>
+    </div>
+  
+    <div class="col-md-4 text-center mb-4">
+      <label id="product3">NO3</label>
+      <img src="nmax.jpg" style="width:400px; height:500px;" class="img-thumbnail"/>
+      <label for="product3" id="price3">30000.00</label>
+      <input type="number" class="form-control" id="qty3" placeholder="Enter quantity"/>
+    </div>
+
+    <div class="col-md-4 text-center mb-4">
+      <label id="product4">NO4</label>
+      <img src="raider.jpg" style="width:400px; height:500px;" class="img-thumbnail"/>
+      <label for="product4" id="price4">40000.00</label>
+      <input type="number" class="form-control" id="qty4" placeholder="Enter quantity"/>
+    </div>
+
+    <div class="col-md-4 text-center mb-4">
+      <label id="product5">NO5</label>
+      <img src="sniper.jpg" style="width:400px; height:500px;" class="img-thumbnail"/>
+      <label for="product5" id="price5">50000.00</label>
+      <input type="number" class="form-control" id="qty5" placeholder="Enter quantity"/>
+    </div>
+
+    <div class="col-md-4 text-center mb-4">
+      <label id="product6">NO6</label>
+      <img src="2nmaxx.jpg" style="width:400px; height:500px;" class="img-thumbnail"/>
+      <label for="product6" id="price6">60000.00</label>
+      <input type="number" class="form-control" id="qty6" placeholder="Enter quantity"/>
+    </div>
+
+   
+
+    <div class="col-md-4">
+      <label for="carts">Orders</label>
+      <textarea class="form-control" rows="29" id="carts" cols="200" readonly style="width:350px; height:400px; font-size:12px;"></textarea>
+      <input type="text" class="form-control border-0" id="total" readonly placeholder="Total"/>
+      <input type="number" class="form-control" id="cash" placeholder="Cash Tendered"/>
+      <input type="text" class="form-control border-0" id="change" readonly placeholder="Change"/>
+    </div>
+  </div>
+</div>
+<script src="app.js"></script>
 </body>
 </html>
