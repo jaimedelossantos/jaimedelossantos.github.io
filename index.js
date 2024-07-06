@@ -5,8 +5,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
         price3: 30000.00,
         price4: 40000.00,
         price5: 50000.00,
-        price6: 60000.00
-        
+        price6: 60000.00,
+        price7: 70000.00
     };
 
     const qtyInputs = [
