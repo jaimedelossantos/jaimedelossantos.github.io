@@ -1,33 +1,56 @@
-function updateOrder() {
-    var prices = [900000, 600000, 100000, 2000000, 6000000, 800000];
-    var quantities = [
-        document.getElementById('qty1').value,
-        document.getElementById('qty2').value,
-        document.getElementById('qty3').value,
-        document.getElementById('qty4').value,
-        document.getElementById('qty5').value,
-        document.getElementById('qty6').value
+document.addEventListener('DOMContentLoaded', (event) => {
+    const prices = {
+        price1: 10000.00,
+        price2: 20000.00,
+        price3: 30000.00,
+        price4: 40000.00,
+        price5: 50000.00,
+        price6: 60000.00,
+        
+    };
+
+    const qtyInputs = [
+        document.getElementById('qty1'),
+        document.getElementById('qty2'),
+        document.getElementById('qty3'),
+        document.getElementById('qty4'),
+        document.getElementById('qty5'),
+        document.getElementById('qty6'),
+        document.getElementById('qty7')
     ];
 
-    var orderList = '';
-    var total = 0;
+    const totalInput = document.getElementById('total');
+    const cashInput = document.getElementById('cash');
+    const changeInput = document.getElementById('change');
+    const cartsTextarea = document.getElementById('carts');
 
-    for (var i = 0; i < quantities.length; i++) {
-        if (quantities[i] > 0) {
-            orderList += 'Item ' + (i + 1) + ': ₱' + prices[i] + ' x ' + quantities[i] + ' = ₱' + (prices[i] * quantities[i]) + '\n';
-            total += prices[i] * quantities[i];
-        }
+    function updateCart() {
+        let total = 0;
+        let cartText = '';
+
+        qtyInputs.forEach((input, index) => {
+            const qty = parseInt(input.value) || 0;
+            const priceKey = `price${index + 1}`;
+            const productPrice = prices[priceKey];
+            if (qty > 0) {
+                total += qty * productPrice;
+                cartText += `Product ${index + 1} - Quantity: ${qty}, Price: ${(qty * productPrice).toFixed(2)}\n`;
+            }
+        });
+
+        totalInput.value = total.toFixed(2);
+        cartsTextarea.value = cartText.trim();
     }
 
-    document.getElementById('carts').value = orderList;
-    document.getElementById('total').value = 'Total: ₱' + total;
-    calculateChange();
-}
+    function calculateChange() {
+        const total = parseFloat(totalInput.value) || 0;
+        const cash = parseFloat(cashInput.value) || 0;
+        const change = cash - total;
+        changeInput.value = change.toFixed(2);
+    }
 
-function calculateChange() {
-    var total = parseFloat(document.getElementById('total').value.replace('Total: ₱', '')) || 0;
-    var cash = parseFloat(document.getElementById('cash').value) || 0;
-    var change = cash - total;
-
-    document.getElementById('change').value = 'Change: ₱' + (change >= 0 ? change : 0);
-}
+    qtyInputs.forEach(input => {
+        input.addEventListener('input', updateCart);
+    });
+    cashInput.addEventListener('input', calculateChange);
+});
