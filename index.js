@@ -1,3 +1,4 @@
+*const btnLike1 = document.getElementById("btnLike1")
 const count1 = document.getElementById("count1")
 
 function countLike1() {
